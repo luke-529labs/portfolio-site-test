@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Home - 529labs Portfolio{% endblock %}
+{% block content %}
+<section class="mb-12">
+  <h2 class="text-3xl font-light mb-2">About 529labs</h2>
+  <p class="text-lg">
+    A high-level overview of who we are and what we do.
+  </p>
+</section>
+
+<section class="mb-12">
+  <h3 class="text-2xl font-light mb-4 border-b pb-2">Featured Projects</h3>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    {% for project in featured_projects %}
+    <div class="transition duration-300 hover:shadow-lg">
+      <img src="{{ project.image }}" alt="{{ project.title }}" class="w-full mb-4 rounded">
+      <h4 class="text-xl font-medium mb-1">{{ project.title }}</h4>
+      <p>{{ project.description }}</p>
+      <!-- Removed text-blue-500 and hover classes -->
+      <a href="{{ project.link }}" class="transition duration-300 hover:underline inline-block mt-2">
+        View Project
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section>
+  <h3 class="text-2xl font-light mb-4 border-b pb-2">Recent Blog Posts</h3>
+  <ul class="space-y-4">
+    {% for post in recent_posts %}
+    <li>
+      <!-- Removed text-gray-800 and hover:text-blue-500 classes -->
+      <a href="{{ url_for('blog_post', post_id=post.id) }}" class="text-xl transition duration-300">
+        {{ post.title }}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endblock %}
+
+

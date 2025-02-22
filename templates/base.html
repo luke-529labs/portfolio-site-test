@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}529labs Portfolio{% endblock %}</title>
+  <!-- Optionally include Tailwind if you need some utilities, but avoid conflicting classes -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <!-- Remove background or text color classes from the body tag -->
+  <header class="py-4 border-b border-gray-200">
+    <div class="container mx-auto px-4">
+      <a href="{{ url_for('index') }}" class="text-2xl">529labs</a>
+      <nav class="mt-2">
+        <a href="{{ url_for('index') }}" class="mr-4">Home</a>
+        <a href="{{ url_for('projects') }}" class="mr-4">Projects</a>
+        <a href="{{ url_for('blog') }}" class="mr-4">Blog</a>
+        <a href="{{ url_for('about') }}">About</a>
+      </nav>
+    </div>
+  </header>
+  
+  <main class="container mx-auto px-4 py-8">
+    {% block content %}{% endblock %}
+  </main>
+  
+  <footer class="py-4 border-t border-gray-200 text-center text-sm">
+    Designed & Developed by 529labs
+  </footer>
+  
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
+
+
+
+

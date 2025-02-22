@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Blog - 529labs Portfolio{% endblock %}
+{% block content %}
+<h2 class="text-3xl font-light mb-6 border-b pb-2">Blog</h2>
+<ul class="space-y-4">
+  {% for post in posts %}
+  <li>
+    <a href="{{ url_for('blog_post', post_id=post.id) }}" class="text-xl transition duration-300">
+      {{ post.title }}
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}
+
+
+

@@ -1,11 +1,99 @@
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 50px;
-}
-h1 {
-    color: #2c3e50;
-}
-p {
-    color: #34495e;
-}
+    background: #f8f9fa; 
+    color: #312e81;       
+    font-family: 'Courier New', Courier, monospace;  
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    color: #312e81; 
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+  }
+  
+  a:hover {
+    color: #312e81;
+    text-decoration: underline;
+  }
+  
+  header, footer {
+    background: #f8f9fa;
+    border-bottom: 1px solid #e0e0e0;
+    border-top: 1px solid #e0e0e0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  section {
+    margin-bottom: 2rem;
+  }
+  
+  h1, h2, h3, h4 {
+    font-weight: 400;
+    color: #312e81;  
+    margin: 0.5rem 0;
+  }
+  
+  button {
+    background: none;
+    border: 1px solid #312e81;
+    color: #312e81;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  button:hover {
+    background: #312e81;
+    color: #f8f9fa;
+  }
+  
+  input, textarea {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    border-radius: 4px;
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    color: #000;
+    background: #fff;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f8f9fa;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #bbb;
+  }
+  
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 0.8s forwards;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .shadow-sm, .shadow, .shadow-lg {
+    box-shadow: none !important;
+  }
+  
+  
